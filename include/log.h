@@ -110,6 +110,7 @@ int _log(enum log_category_t cat, enum log_level_t level, const char *file,
 #define log_io(_fmt...)
 #endif
 
+#define _LOG_DEBUG
 #if CONFIG_IS_ENABLED(LOG)
 #ifdef LOG_DEBUG
 #define _LOG_DEBUG	1
@@ -129,6 +130,7 @@ int _log(enum log_category_t cat, enum log_level_t level, const char *file,
 #define log(_cat, _level, _fmt, _args...)
 #endif
 
+#define DEBUG
 #ifdef DEBUG
 #define _DEBUG	1
 #else
